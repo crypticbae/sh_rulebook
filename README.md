@@ -44,8 +44,8 @@ A modern, responsive web application for managing and displaying roleplay rules 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/swisshub-regelwerke.git
-   cd swisshub-regelwerke
+   git clone https://github.com/crypticbae/sh_rulebook.git
+   cd sh_rulebook
    ```
 
 2. Install dependencies:

@@ -1,8 +1,7 @@
-# SwisshubRP Regelwerke
+# Roleplays Rulebook with Backend and Factions
 
 A modern, responsive web application for managing and displaying roleplay rules and factions for SwisshubRP. Built with React, TypeScript, and Supabase.
 
-![SwisshubRP Regelwerke](https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=3270&auto=format&fit=crop)
 
 ## Features
 

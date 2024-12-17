@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme transitions */
+* {
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+/* Light mode overrides */
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: rgba(255, 255, 255, 0.8);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border-color: #e5e7eb;
+}
+
+/* Dark mode overrides */
+.dark {
+  --bg-primary: #0A0A0B;
+  --bg-secondary: rgba(0, 0, 0, 0.8);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Editor Styles */
+.ProseMirror {
+  outline: none;
+  color: var(--text-primary);
+  min-height: 200px;
+}
+
+.ProseMirror p,
+.prose p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.ProseMirror > *:first-child,
+.prose > *:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror > *:last-child,
+.prose > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.ProseMirror ul, .prose ul,
+.ProseMirror ol, .prose ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.ProseMirror ul, .prose ul {
+  list-style-type: disc;
+}
+
+.ProseMirror ol, .prose ol {
+  list-style-type: decimal;
+}
+
+/* Headings */
+.ProseMirror h1, .prose h1 {
+  font-size: 2rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: bold;
+}
+
+.ProseMirror h2, .prose h2 {
+  font-size: 1.5rem;
+  margin: 1.4rem 0 0.8rem;
+  font-weight: bold;
+}
+
+.ProseMirror h3, .prose h3 {
+  font-size: 1.25rem;
+  margin: 1.3rem 0 0.6rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: white;
+}
+
+/* Lists */
+.ProseMirror li, .prose li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+/* Text formatting */
+.ProseMirror strong, .prose strong {
+  font-weight: 600;
+  color: white;
+}
+
+.ProseMirror em, .prose em {
+  font-style: italic;
+}
+
+.ProseMirror u, .prose u {
+  text-decoration: underline;
+}
+
+/* Custom styles for the icon selector */
+select option {
+  padding: 8px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+select option:hover {
+  background-color: #2a2a2a;
+}
+
+/* Search result highlight animation */
+@keyframes highlight-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(145, 17, 17, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(145, 17, 17, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(145, 17, 17, 0);
+  }
+}
+
+.highlight-pulse {
+  animation: highlight-pulse 2s ease-out;
+}
+
+/* Style for highlighted search terms */
+.prose mark {
+  background-color: rgba(145, 17, 17, 0.2);
+  color: #911111;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Transition classes */
+.transition-height {
+  transition: max-height 0.3s ease-out;
+}
+
+.transition-scale {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
